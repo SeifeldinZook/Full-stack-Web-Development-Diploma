@@ -1,0 +1,190 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <section id="que1" class="bg-primary pt-5">
+        <div class="queNo text-center py-3 bg-white" style="font-size: 30px">
+            <span class="text-danger">
+                <span class="text-info">Q1</span> | 30 MARK</span>
+        </div>
+        <div class="container p-5">
+            <div class="dos">
+                <h1 class="text-success"><b>WORK TO - DOS</b></h1>
+                <h6 class="text-muted">Enter text into the input field to add items to your list.</h6>
+                <h6 class="text-muted">Click the item to mark it as complete.</h6>
+                <h6 class="text-muted">Click the "X" to remove the item from your list.</h6>
+                <div class="row">
+                    <div class="col-lg-11">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="itemName" placeholder="New Item" />
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        <button onclick="addItem()" class="btn btn-primary">
+                            Add
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 m-auto">
+                        <table class="table text-center">
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="que2" class="hustlin">
+        <div class="queNo text-center py-3 bg-white" style="font-size: 30px">
+            <span class="text-danger">
+                <span class="text-info">Q2</span> | 20 MARK</span>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center align-content-center">
+                <h2 id="music" class="music text-center">HUSTLIN'</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="que3" class="bg-success pt-5 counters">
+        <div class="queNo text-center py-3 bg-white" style="font-size: 30px">
+            <span class="text-danger">
+                <span class="text-info">Q3</span> | 20 MARK</span>
+        </div>
+
+        <div class="row">
+            <div class="counter">
+                <h2>We are coming soon.</h2>
+                <div class="count">
+                    <div class="countd">
+                        <span id="days">00</span>
+                        DAYS
+                    </div>
+                    <div class="countd">
+                        <span id="hours">00</span>
+                        HOURS
+                    </div>
+                    <div class="countd">
+                        <span id="minutes">00</span>
+                        MINUTES
+                    </div>
+                    <div class="countd">
+                        <span id="seconds">00</span>
+                        SECONDS
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="que4">
+        <div class="queNo text-center py-3 bg-white" style="font-size: 30px">
+            <span class="text-danger">
+                <span class="text-info">Q4</span> | 20 MARK</span>
+        </div>
+        <div class="row">
+                <div class="col">
+                    <div id="rgb">
+                        <div id="colors">
+                            <svg id="colorR" width="348px" height="500px" viewBox="0 0 348 871">
+                                <g id="R">
+                                    <path 
+                                        d="M0.487760349,0.548436037 L321.688927,0.548436037 L347.5809,19.7048691 L321.688927,28.7309964 L321.688927,318.656981 L193.552168,362.433507 L320.688932,802.137425 L252.372987,815.223448 L251.813124,839.463536 L225.714002,820.330017 L97.2200012,417.02069 L97.2216035,836.023329 L33.4720243,846.593891 L28.1082895,870.820714 L2.08000183,851.799122 L0.487760349,0.548436037 Z M97.0427702,295.875472 L224.739394,257.659047 L224.739394,97.5635891 L97.0427702,97.5635891 L97.0427702,295.875472 Z"
+                                        fill="#FFFFFF">
+                                    </path>
+                                    <path id="R-fill"
+                                        d="M26.4877603,19.548436 L347.688927,19.548436 L347.688927,337.656981 L219.552168,381.433507 L346.688932,821.137425 L251.714002,839.330017 L123.220001,436.02069 L123.221603,855.023329 L28.0800018,870.799122 L26.4877603,19.548436 Z M123.04277,314.875472 L250.739394,276.659047 L250.739394,116.563589 L123.04277,116.563589 L123.04277,314.875472 Z"
+                                        fill="#000000">
+                                    </path>
+                                </g>
+                            </svg>
+                            <svg id="colorG" width="377px" height="500px" viewBox="0 0 377 805">
+                                <g id="G">
+                                    <polyline fill="#FFFFFF"
+                                        points="0.448599459 0.443807831 346.365815 0.443807831 373.332992 20.4663527 346.365815 24.8985735 346.365815 104.919174 103.258747 104.919174 103.258747 663.128345 279.991249 637.601256 279.991249 487.266826 194.410659 500.065739 186.324294 525.468283 159.140011 505.340603 159.140011 420.987664 349.347298 391.866884 376.3022 411.888052 349.347298 422.548751 349.347298 728.536376 29.9496963 779.732336 27.3311723 804.749167 0.119338388 784.513818">
+                                    </polyline>
+                                    <polyline id="G-fill" fill="#000000"
+                                        points="27.4485995 20.4438078 373.365815 20.4438078 373.365815 124.919174 130.258747 124.919174 130.258747 683.128345 306.991249 657.601256 306.991249 507.266826 186.140011 525.340603 186.140011 440.987664 376.347298 411.866884 376.347298 748.536376 27.1193384 804.513818">
+                                    </polyline>
+                                </g>
+                            </svg>
+                            <svg id="colorB" width="297px" height="500px" viewBox="0 0 297 745">
+                                <g id="B">
+                                    <path
+                                        d="M0.454392902,726.373948 L21.5222735,744.293567 L23.7929319,722.559292 L273.265592,681.783288 L273.265592,407.263534 L294.066759,405.282398 L273.265592,387.185934 L79.9911132,356.103535 L275.078347,271.244765 L275.078347,22.3981183 L296.023118,18.2441404 L275.078347,0.0548589788 L0.454392902,0.0548589788 L0.454392902,726.373948 Z M83.2296948,82.8563941 L192.548461,82.8563941 L192.548461,219.883967 L83.2296948,251.485152 L83.2296948,82.8563941 Z M83.2296948,443.26462 L193.538784,458.470512 L193.538784,610.454622 L83.2296948,625.6476 L83.2296948,443.26462 Z"
+                                        fill="#FFFFFF"></path>
+                                    <path
+                                        d="M21.4543929,744.373948 L294.265592,699.783288 L294.265592,405.185934 L100.991113,374.103535 L296.078347,289.244765 L296.078347,18.054859 L21.4543929,18.054859 L21.4543929,744.373948 Z M104.229695,100.856394 L213.548461,100.856394 L213.548461,237.883967 L104.229695,269.485152 L104.229695,100.856394 Z M104.229695,461.26462 L214.538784,476.470512 L214.538784,628.454622 L104.229695,643.6476 L104.229695,461.26462 Z"
+                                        id="B-fill" fill="#000000"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="que5" class="bg-primary pt-5">
+        <div class="queNo text-center py-3 bg-white" style="font-size: 30px">
+            <span class="text-danger">
+                <span class="text-info">Q5</span> | 10 MARK</span>
+        </div>
+
+        <div class="container p-5">
+            <div class="myForm">
+                <h1 class="text-success"><b>Form Validation</b></h1>
+                <div class="form-group">
+                    <label>User Name :</label>
+                    <input class="form-control" type="text" id="userName" placeholder="Enter name">
+                    <small id="namePopup" class="text-danger mb-4 border">
+                        entre valid username
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Email Address :</label>
+                    <input class="form-control" type="text" id="userEmail" placeholder="Enter email">
+                    <small id="emailPopup" class="text-danger mb-4 border">
+                        entre valid email
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Phone :</label>
+                    <input class="form-control" type="text" id="userPhone" placeholder="Enter phone">
+                    <small id="phonePopup" class="text-danger mb-4 border">
+                        entre valid phone
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" id="userMessage" placeholder="Entre your message" rows="4"
+                        spellcheck="false"></textarea>
+                    <small id="messagePopup" class="text-danger mb-4 border">
+                        30 letters remaining
+                    </small>
+                </div>
+
+                <button onclick="addUser()" class="btn btn-primary mt-4">SUBMIT</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/que1.js"></script>
+    <script src="js/que2.js"></script>
+    <script src="js/que3.js"></script>
+    <script src="js/que4.js"></script>
+    <script src="js/que5.js"></script>
+</body>
+
+</html>

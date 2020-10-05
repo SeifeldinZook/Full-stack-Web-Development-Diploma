@@ -1,0 +1,21 @@
+body
+{
+    font-family: 'segoe ui light';
+}
+
+h1 {
+    margin: 20px;
+    padding: 5px;
+    font-size: x-large;
+    color: brown;
+    text-align: center;
+    background-color: burlywood;
+}
+
+.disabled {
+    cursor: default !important;
+}
+
+.alert {
+    padding:0.2rem 1.25rem;
+}

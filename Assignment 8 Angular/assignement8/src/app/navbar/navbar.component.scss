@@ -1,0 +1,51 @@
+$mainColor:#09c;
+$footerBG:#b0b0b0;
+$font:"Poppins", sans-serif;
+$z1:1;
+$clearBoth: both;
+$posRelative:relative;
+$defCursor: default;
+$padd30px:30px;
+
+.navbar {
+  border-bottom: 1px solid #f25454;
+  background-color: #1a1a1a;
+}
+.navbar-brand {
+  color:#f25454 ;
+  font-weight: 900;
+}
+
+.navbar-social a > i,
+.navbar-nav > li a {
+  cursor: pointer;
+  padding: 0 10px;
+  color: #fff;
+}
+.navbar-social a > i:hover{
+  padding: 0 10px;
+  color: #fff;
+}
+.navbar-nav > li > a {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  background-color: transparent !important;
+  padding: 0 10px;
+  color: #fff !important;
+  margin-right: 20px;
+}
+
+.btn-outline-success {
+  color: #f25454;
+  border-color: #f25454;
+}
+.btn-outline-success[_ngcontent-sjy-c50] {
+  color: #f25454;
+  border-color: #f25454;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #f25454;
+  border-color: #f25454;
+}

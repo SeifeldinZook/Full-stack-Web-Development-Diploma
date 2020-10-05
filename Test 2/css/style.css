@@ -1,0 +1,96 @@
+.dos, .myForm {
+    background-color: #EEEEEE;
+    text-align: center;
+    padding: 35px;
+}
+
+#que1 td {
+    padding: 0px !important;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+/* *************************************************************** */
+/* *************************************************************** */
+#que2 {
+    background-color: yellow;
+}
+.hustlin {
+    background-color: #fff;
+    min-height:500px;
+}
+.hustlin .music {
+    color: #000;
+    font-size: 7rem;
+    line-height: 500px
+}
+/* *************************************************************** */
+/* *************************************************************** */
+.counters {
+    position: relative;
+    min-height: 500px;
+}
+
+.counter {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.counter h1 {
+    text-transform: uppercase;
+    font-size: 60px;
+    margin: 0px;
+}
+
+.counter h2 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.count {
+    margin: 40px 0;
+}
+
+.countd {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border: 2px solid;
+    margin: 0 30px;
+    font-size: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.countd span {
+    display: block;
+    font-size: 26px;
+    margin-top: 14px;
+}
+/* *************************************************************** */
+/* *************************************************************** */
+#rgb {
+    background-color: white;
+}
+/* *************************************************************** */
+/* *************************************************************** */
+#que5 .form-group {
+    text-align: left;
+}
+
+#que5 .label, #que5 small {
+    margin-left: 5px;
+}
+
+#que5 small {
+    display: none;
+}

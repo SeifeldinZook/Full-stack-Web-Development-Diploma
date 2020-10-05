@@ -1,0 +1,31 @@
+header, footer{
+    padding: 0 140px;
+    color: #AAAAAA;
+    font-weight: bold;
+}
+header hr, footer hr{
+    background-color: black;
+    font-weight: bold;
+}
+
+
+.bookmark, tr {
+    background-color:#EEEEEE;
+    text-align: center;
+    padding: 35px;
+}
+.bookmark h4 {
+    margin-bottom: 50px;
+    color: black;
+}
+
+td {
+    padding-top: 15px;
+    font-size: 25px;
+}
+.form-group {overflow: auto;}
+.form-group small{
+    float: left;
+    padding: 5px;
+    display: none;
+}

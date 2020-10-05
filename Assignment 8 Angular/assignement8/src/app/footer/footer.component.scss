@@ -1,0 +1,54 @@
+$mainColor:#09c;
+$footerBG:#b0b0b0;
+$font:"Poppins", sans-serif;
+$z1:1;
+$clearBoth: both;
+$posRelative:relative;
+$defCursor: default;
+$padd30px:30px;
+
+footer {
+  position: $posRelative;
+  clear: $clearBoth;
+  z-index: $z1;
+  font-family:$font;
+  color: $footerBG;
+}
+
+footer .footer-widgets a {color: $footerBG;}
+.footer-social {cursor: $defCursor;}
+footer .footer-copyright {
+  position: $posRelative;
+  clear: $clearBoth;
+  background: #1a1a1a;
+  padding-top: $padd30px;
+  padding-bottom: $padd30px;
+}
+.footer-social a {margin: 0 10px;}
+.footer-social a>i {
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  width: 1.2em;
+  text-align: center;
+  transition: all 0.3s;
+}
+footer .copyright {
+  clear: both;
+  margin: 0;
+  line-height: 26px;
+  letter-spacing: 0.5px;
+  text-align: right;
+}
+footer .copyright a {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.footer-social a>i:hover,
+footer .footer-widgets a:hover,
+.tag:hover,
+footer .copyright a:hover {color: #f25454;text-decoration: none;}
+footer .to-top:hover {background-color: #f25454;color: white;}
+.tag:hover {border: 1px solid #f25454;}

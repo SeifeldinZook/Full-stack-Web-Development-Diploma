@@ -1,0 +1,73 @@
+<div class="row my-2">
+  <div class="col-md-4">
+    <div class="brdr w-25 my-5"></div>
+    <h2>Trendings</h2>
+    <br>
+    <h2>To Watch Now!</h2>
+    <div class="brdr w-100 my-3"></div>
+  </div>
+  <div *ngFor='let item of allTrending' class="col-md-2">
+    <div class="allTrending my-3 position-relative" [routerLink]="['/details', item.media_type, item.id]">
+      <img [src]="imgPrefix+item.poster_path" class="img-thumbnail h-190px curPointer">
+      <h3 class="h6 mt-2">{{item.name}}{{item.title}}</h3>
+      <div class="vote">
+        {{item.vote_average}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row my-2">
+  <div class="col-md-4">
+    <div class="brdr w-25 my-5"></div>
+    <h2>In Theatre</h2>
+    <br>
+    <h2>To Watch Now!</h2>
+    <div class="brdr w-100 my-3"></div>
+  </div>
+  <div *ngFor='let movie of moviesTrending' class="col-md-2">
+    <div class="moviesTrending my-3 position-relative" [routerLink]="['/details', movie.media_type, movie.id]">
+      <img [src]="imgPrefix+movie.poster_path" class="img-thumbnail h-190px curPointer">
+      <h3 class="h6 mt-2">{{movie.name}}{{movie.title}}</h3>
+      <div class="vote">
+        {{movie.vote_average}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row my-2">
+  <div class="col-md-4">
+    <div class="brdr w-25 my-5"></div>
+    <h2>On TV</h2>
+    <br>
+    <h2>To Watch Now!</h2>
+    <div class="brdr w-100 my-3"></div>
+  </div>
+  <div *ngFor='let tvShow of tvTrending' class="col-md-2">
+    <div class="allTrending my-3 position-relative" [routerLink]="['/details', tvShow.media_type, tvShow.id]">
+      <img [src]="imgPrefix+tvShow.poster_path" class="img-thumbnail h-190px curPointer">
+      <h3 class="h6 mt-2">{{tvShow.name}}{{tvShow.title}}</h3>
+      <div class="vote">
+        {{tvShow.vote_average}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row my-2">
+  <div class="col-md-4">
+    <div class="brdr w-25 my-5"></div>
+    <h2>Trending Celebrities</h2>
+    <div class="brdr w-100 my-3"></div>
+  </div>
+  <div *ngFor='let person of peopleTrending' class="col-md-2">
+    <div class="allTrending my-3 position-relative" [routerLink]="['/details', person.media_type, person.id]">
+      <img [src]="imgPrefix+person.profile_path" class="img-thumbnail h-190px curPointer">
+      <h3 class="h6 mt-2">{{person.name}}{{person.title}}</h3>
+      <div class="vote">
+        {{person.popularity}}
+      </div>
+    </div>
+  </div>
+</div>

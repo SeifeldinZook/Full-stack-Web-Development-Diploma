@@ -1,0 +1,274 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/index_style.css">
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <header class="vh-100 d-flex flex-wrap align-items-start justify-content-center position-relative">
+    <nav class="navbar navbar-expand-lg w-100  navbar-dark bg-opacity">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" class="logo" alt="spice resturant logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recipesSearch">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <input id="searchInput" class="form-control mr-sm-2" type="search" placeholder="Search recipes" aria-label="Search">
+          <button id="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+      </div>
+    </nav>
+    <h1 class="w-100 text-white font-weight-bolder text-center">Never Miss a Recipe!</h1>
+
+    <div class="searchInput position-absolute w-75 m-auto p-3 shadow-lg rounded bg-white">
+      <div class="row no-gutters">
+        <div class="col-md-10">
+          <input id="searchInput" placeholder="Search recipes" class="rounded-0 form-control" type="text" name="">
+        </div>
+        <div class="col-md-2">
+          <button id="searchBtn" class="btn rounded-mine btn-block text-white btn-mine">search</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="recipesSearch" class="text-center py-5">
+    <div class="container-fluid">
+      <h2 class="font-weight-bolder">Forkify API v1 Documentation</h2>
+      <p>
+        This is the Forkify API, which replaces the deprecated food2fork API to fetch and display recipe
+        food data.
+      </p>
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <div class="category">
+            <h3 class="font-weight-bolder">Meal Type</h3>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category">
+            <h3 class="font-weight-bolder">Diet & Health</h3>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category">
+            <h3 class="font-weight-bolder">Ingredient</h3>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="category">
+            <h3 class="font-weight-bolder">Dish Type</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid text-left">
+        <div class="row">
+          <div class="col-md-8">
+            <div id="recipesRow" class="row">
+            </div>
+          </div>
+          <div id="recipeDetails" class="col-md-4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="pt-5">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <ul>
+            <li>carrot</li>
+            <li>pumpkin</li>
+            <li>parsley</li>
+            <li>dill</li>
+            <li>coconut</li>
+            <li>fig</li>
+            <li>grape</li>
+            <li>grapefruit</li>
+            <li>kiwifruit</li>
+            <li>lemon</li>
+            <li>ice cream</li>
+            <li>duck</li>
+            <li>curry</li>
+            <li>goat</li>
+            <li>beef</li>
+            <li>lamb</li>
+            <li>turkey</li>
+            <li>pork</li>
+            <li>fish</li>
+            <li>crab</li>
+            <li>bacon</li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <ul>
+            <li>lime</li>
+            <li>lychee</li>
+            <li>mandarin</li>
+            <li>mango</li>
+            <li>melon</li>
+            <li>nectarine</li>
+            <li>orange</li>
+            <li>broccoli</li>
+            <li>red pepper</li>
+            <li>coriander</li>
+            <li>brussel sprouts</li>
+            <li>peas</li>
+            <li>radish</li>
+            <li>celery</li>
+            <li>sweet potato</li>
+            <li>cabbage</li>
+            <li>artichoke</li>
+            <li>leek</li>
+            <li>cherry</li>
+            <li>sushi</li>
+            <li>ham</li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <ul>
+            <li>passion fruit</li>
+            <li>peach</li>
+            <li>pear</li>
+            <li>pineapple</li>
+            <li>plum</li>
+            <li>pomegranate</li>
+            <li>quince</li>
+            <li>raspberry</li>
+            <li>strawberry</li>
+            <li>asparagus</li>
+            <li>blackcurrant</li>
+            <li>boysenberry</li>
+            <li>onion</li>
+            <li>bean</li>
+            <li>green bean</li>
+            <li>ribs</li>
+            <li>potato</li>
+            <li>chili</li>
+            <li>lentil</li>
+            <li>apple</li>
+            <li>pepperoni</li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <ul>
+            <li>watermelon</li>
+            <li>rosemary</li>
+            <li>tomato</li>
+            <li>salad</li>
+            <li>pizza</li>
+            <li>pasta</li>
+            <li>popcorn</li>
+            <li>lobster</li>
+            <li>steak</li>
+            <li>pudding</li>
+            <li>basil</li>
+            <li>apricot</li>
+            <li>banana</li>
+            <li>green pepper</li>
+            <li>avocado</li>
+            <li>lettuce</li>
+            <li>blueberry</li>
+            <li>garlic</li>
+            <li>blackberry</li>
+            <li>mushrooms</li> 
+            <li>salami</li>  
+          </ul>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <ul>
+            <li>hamburger</li>
+            <li>pie</li>
+            <li>cake</li>
+            <li>sausage</li>
+            <li>tacos</li>
+            <li>kebab</li>
+            <li>cauliflower</li>
+            <li>beetroot</li>
+            <li>poutine</li>
+            <li>oregano</li>
+            <li>champ</li>
+            <li>lasagna</li>
+            <li>poke</li>
+            <li>chocolate</li>
+            <li>croissant</li>
+            <li>arepas</li>
+            <li>bunny chow</li>
+            <li>pierogi</li>
+            <li>donuts</li>
+            <li>rendang cucumber</li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <ul>
+            <li>seafood</li>
+            <li>chips</li>
+            <li>fries</li>
+            <li>masala</li>
+            <li>paella</li>
+            <li>som tam</li>
+            <li>chicken</li>
+            <li>toast</li>
+            <li>marzipan</li>
+            <li>tofu</li>
+            <li>ketchup</li>
+            <li>hummus</li>
+            <li>chili</li>
+            <li>corn</li>
+            <li>zucchini</li>
+            <li>saffron</li>
+            <li>cinnamon</li>
+            <li>maple syrup</li>
+            <li>fajitas</li>
+            <li>parma ham</li>  
+            <li>papaya</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row copyrights px-5 py-0">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+          <div class="icon"><i class="fab fa-facebook-f"></i></div>
+          <div class="icon"><i class="fab fa-instagram"></i></div>
+          <div class="icon"><i class="fab fa-twitter"></i></div>
+          <div class="icon"><i class="fab fa-pinterest"></i></div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+          <p class="copyright text-right">&copy; Copyright <strong>Zook</strong>. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/first.js"></script>
+</body>
+
+</html>

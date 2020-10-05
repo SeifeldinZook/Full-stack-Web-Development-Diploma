@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    background-color: #F5F5F5;
+}
+.bg-main {
+    background-color: #F5F5F5;
+}
+.title-a {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.txt-sky {
+    color: #09c;
+    font-size: .8rem;
+}
+.item-shadow {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.2);
+}
+/* ****************************************************************************** */
+/* ****************************************************************************** */
+#header {
+    background-image: url(images/intro-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+#header .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+nav .navbar-brand {font-size: 1.6rem; text-align: initial;}
+nav li a.active, 
+nav li a:hover {
+    border-bottom: solid 0px white;
+    position: relative;
+}
+nav li a::after {
+    content: '';
+    background-color: white;
+    width: 0%;
+    height: 1%;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    transition: width 2s;
+}
+nav li a.active::after {width: 50%;}
+nav li a:hover::after {width: 50%;}
+#header .header-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 15rem;
+}
+#header .header-content p {
+    font-size: 2rem;
+    font-weight: 800;
+}
+/* ****************************************************************************** */
+.bar p {font-size: 1.2rem;}
+.About-me-2 h2::after {
+    content: '';
+    background-color: #09c;
+    width: 17%;
+    height: 7%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+#About-me .container {
+    border:solid 0px rgb(0, 0, 0, 0.1);
+}
+/* ****************************************************************************** */
+#service .ser-item {
+    border-radius: 5%;
+    border:solid 0px rgb(0, 0, 0, 0.1);
+}
+#service .ser-cont::after {
+    content: '';
+    background-color: #09c;
+    width: 4%;
+    height: 6%;
+    position: absolute;
+    top: 108%;
+    left: 48%;
+}
+#service .icon {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    border: solid 10px #09c;
+    margin: auto;
+}
+#service .icon:hover {
+    border: solid 10px #CCE1F8;
+    background-color: #09c;
+    color: white;
+}
+/* ****************************************************************************** */
+#stats {
+    background-image: url(images/counters-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#stats .overlay {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    background-color: #0078ff;
+}
+#stats .icon {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    border: solid 10px #daebfc;
+    margin:auto;
+    color: white;
+}
+/* ****************************************************************************** */
+#portofolio .ser-cont::after {
+    content: '';
+    background-color: #09c;
+    width: 4%;
+    height: 6%;
+    position: absolute;
+    top: 108%;
+    left: 48%;
+}
+#portofolio .desc h5 {
+    line-height: 0.8;
+}
+.bg-sky {
+    border: solid 1px #09c;
+    background-color: #09c;
+    color: white;
+    border-radius: 55%;
+}
+/* ****************************************************************************** */
+#testemonials {
+    background-image: url(images/overlay-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+#testemonials .overlay {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: #0078ff;
+}
+#testemonials img {
+    border-radius: 50%;
+}
+#testemonials .desc .quote {
+    height: 6vh;
+    width: 3vw;
+    border-radius: 50%;
+    color: #0078ff;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+#testemonials .desc .btns {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#testemonials .desc .btns1 {
+    height: 1.2vh;
+    width: 1.7vw;
+    float: left;
+    margin-right: 5px;
+    border: none;
+}
+#testemonials .desc .btns2 {
+    height: 1.2vh;
+    width: 2vw;
+    float: left;
+    border: none;
+}
+/* ****************************************************************************** */
+#blog .blog-cont::after {
+    content: '';
+    background-color: #09c;
+    width: 4%;
+    height: 6%;
+    position: absolute;
+    top: 108%;
+    left: 48%;
+}
+/* #blog .card img::after {
+    content: 'Web Design';
+    background-color: #09c;
+    color: white;
+    width: 30%;
+    height: 6%;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    border-radius: 10%;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.card-category-box {
+    position: absolute;
+    text-align: center;
+    top: 222px;
+    left: 15px;
+    right: 15px;
+    line-height: 25px;
+}
+.card-category {
+    display: inline-block;
+    color: #fff;
+    padding: 5px 15px 1px;
+    background-color: #0078ff;
+    border-radius: 4px;
+}
+#blog .clickme:hover {color: #0078ff; cursor: pointer;}
+#blog .card-footer .pic {width: 10%;}
+#blog .card-footer .pic img {border-radius: 50%;}
+#blog .card-footer .name {width: 55%; font-size: 1.2rem;}
+#blog .card-footer .time {width: 25%; margin-left: 1vw;}
+.tiktok {font-size: 1.2rem;}
+/* ****************************************************************************** */
+#contact {
+    background-image: url(images/overlay-bg.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+#contact .overlay {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.7;
+    background-color: #0078ff;
+    z-index: 0;
+}
+#contact .cont-title {
+    font-size: 2rem;
+    position: relative;
+    color: #1e1e1e;
+    font-weight: 500;
+}
+#contact .cont-title::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: #0078ff;
+    width: 100px;
+    bottom: -12px;
+}
+#contact form button {
+    width: 12rem;
+    height: 3.5rem;
+    border-radius: 5rem;
+    font-size: 1.3rem;
+}
+#contact .icons .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: solid 3px #09c;
+    border-radius: 50%;
+    float: left;
+    margin: 1vh 1rem 10vh 0;
+    color: black;
+}
+#contact .icons .icon:hover {
+    border: solid 3px #CCE1F8;
+    background-color: #09c;
+    color: white;
+    cursor: pointer;
+}
+/* ****************************************************************************** */
+#footer .copyright-box {line-height: 0.5rem;}

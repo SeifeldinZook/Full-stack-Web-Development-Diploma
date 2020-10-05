@@ -1,0 +1,49 @@
+<div class="row my-5">
+  <div class="col-md-5">
+    <img *ngIf='itemDetails?.poster_path' class="img-fluid"
+    [src]="imgPrefix+itemDetails?.poster_path">
+    <img *ngIf='itemDetails?.profile_path' class="img-fluid"
+    [src]="imgPrefix+itemDetails?.profile_path">
+  </div>
+  <div class="col-md-7">
+    <h2>{{itemDetails?.title}}{{itemDetails?.name}}</h2>
+    <h4>{{itemDetails?.first_air_date}}{{itemDetails?.release_date}}{{itemDetails?.birthday}}</h4>
+    <p class="secondFontColor my-3">{{itemDetails?.tagline}}</p>
+    <span class="mx-2 bg-info rounded-0 p-2" *ngFor='let genre of itemDetails?.genres'>{{genre.name}}</span>
+    <div *ngIf='itemDetails'>
+      <p class="lead secondFontColor my-4">{{itemDetails?.overview}}{{itemDetails?.biography}}</p>
+
+      <div *ngIf='itemDetails?.production_companies'>
+        <b class="lead">Produced by: </b>
+        <span class="lead secondFontColor my-2" *ngFor='let company of itemDetails?.production_companies; let i = index'>
+          {{company.name}} <span *ngIf='i !== itemDetails?.production_companies.length-1'>-</span>
+        </span><br>
+      </div>
+
+      <div *ngIf='itemDetails?.created_by'>
+        <b class="lead">Created by: </b>
+        <span class="lead secondFontColor my-2" *ngFor='let author of itemDetails?.created_by'>
+          {{author.name}} <span *ngIf='i !== itemDetails?.created_by.length-1'>-</span>
+        </span><br>
+      </div>
+
+      <div *ngIf='itemDetails?.vote_average'>
+        <b class="lead">Vote Average: </b>
+        <span class="lead secondFontColor my-2">{{itemDetails?.vote_average}}</span><br>
+      </div>
+
+      <div *ngIf='itemDetails?.vote_count'>
+        <b class="lead">Vote Count: </b>
+        <span class="lead secondFontColor my-2">{{itemDetails?.vote_count}}</span><br><br>
+      </div>
+
+      <div *ngIf='itemDetails?.popularity'>
+        <b class="lead">Popularity: </b>
+        <span class="lead secondFontColor my-2">{{itemDetails?.popularity}}</span><br><br>
+      </div>
+
+      <a (click)='homePage()' class="bg-danger p-2 text-white text-decoration-none" target="_blank">Go HomePage!</a>
+    </div>
+
+  </div>
+</div>

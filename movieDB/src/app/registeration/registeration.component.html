@@ -1,0 +1,36 @@
+<h3 class="mt-3">Registration Form:</h3>
+<form class="w-75 m-auto py-3" [formGroup]='registrationForm' (ngSubmit)='getRegistrationReport(registrationForm)'>
+  <div class="form-group">
+    <label>firstName: </label>
+    <input formControlName='first_name' type="text" class="form-control" maxlength="15"
+    [class.is-valid]="registrationForm.get('first_name').errors == null && registrationForm.get('first_name').touched">
+    <p *ngIf="registrationForm.get('first_name').errors != null && registrationForm.get('first_name').touched"
+    class="py-2 text-danger">First Name is inValid</p>
+  </div>
+  <div class="form-group">
+    <label>lastName: </label>
+    <input formControlName='last_name' type="text" class="form-control" maxlength="15"
+    [class.is-valid]="registrationForm.get('last_name').errors == null && registrationForm.get('last_name').touched">
+    <p *ngIf="registrationForm.get('last_name').errors != null && registrationForm.get('last_name').touched"
+    class="py-2 text-danger">Last Name is inValid</p>
+  </div>
+  <div class="form-group">
+    <label>Email: </label>
+    <input formControlName='email' type="email" class="form-control" maxlength="30"
+    [class.is-valid]="registrationForm.get('email').errors == null && registrationForm.get('email').touched">
+    <p *ngIf="registrationForm.get('email').errors != null && registrationForm.get('email').touched"
+    class="py-2 text-danger">Email is inValid</p>
+  </div>
+  <div class="form-group">
+    <label>Password: </label>
+    <input formControlName='password' type="password" class="form-control"
+    [class.is-valid]="registrationForm.get('password').errors == null && registrationForm.get('password').touched">
+    <p *ngIf="registrationForm.get('password').errors != null && registrationForm.get('password').touched"
+    class="py-2 text-danger">Password is inValid</p>
+  </div>
+  <button [disabled]="registrationForm.invalid" type="submit" class="btn btn-mine text-white mt-3">Register</button>
+</form>
+
+<div *ngIf="registerFlag" class="alert alert-danger m-auto">
+  <p>You have already an account!</p>
+</div>

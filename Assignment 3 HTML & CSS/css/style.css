@@ -1,0 +1,217 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Alegreya Sans';}
+.container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 50px 0px;
+    overflow: hidden;}
+
+
+.navbar {
+    height: 0;
+    background-color: teal;}
+.navbar .brand {
+    width: 30%;
+    margin-right: 20%;
+    float: left;}
+.navbar .brand img {
+    width: 50%;}
+.navbar .links {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0px;}
+.navbar .links li {
+    list-style: none;
+    float: left;}
+.navbar .links li a {
+    font-size: 25px;
+    font-family: "Alegreya Sans";
+    color: white;
+    padding: 10px 19px 10px 19px;}
+.navbar .links li.active a, .navbar .links li a:hover {
+    color: #8e7754}
+
+
+.header {
+    background-image: url(images/drew-coffman-1872.jpg);
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    color: white;}
+.header .container {
+    padding-top: 380px;
+    font-weight: bold;}
+.header .container h1 {
+    font-size: 80px;
+    margin: 0px;
+    font-weight:900;}
+.header .container p {
+    margin: 5px 260px;
+    font-size: 22px;
+    font-weight: 700;}
+.header .container .btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: 2px solid ;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;}
+.header .container .btn-one {
+    margin-right: 10px;
+    background-color: #8e7754;
+    border-color: #8e7754;}
+.header .container .btn-two {
+    background-color: transparent;}
+
+
+.who {
+    background-color: #FFFFFF;
+    overflow: auto;}
+.who .container .img {
+    background-color: yellowgreen;
+    float: left;
+    width: 45%;}
+.who .container .img img {
+    width: 100%;}
+.who .container .txt {
+    float: left;
+    width: 55%;
+    box-sizing: border-box;
+    padding: 30px 5px 20px 55px;
+    font-family: "Alegreya Sans";
+    line-height: 30px;
+    font-size: 17px;}
+.who .container .txt .icon-list li {
+    padding: 15px;}
+
+
+.Location {
+    overflow: auto;
+    background-color:#F8F8F8;}
+.Location .container .txt {
+    float: left;
+    width: 55%;
+    box-sizing: border-box;
+    padding: 30px 55px 20px 5px;
+    font-family: "Alegreya Sans";
+    line-height: 30px;
+    font-size: 17px;}
+.Location .container .img {
+    float: left;
+    width: 45%;}
+.Location .container .img img {
+    width: 100%;}
+
+
+.products {
+    background-color: white;
+    text-align: center;
+    overflow: auto;}
+.products .pro-one {
+    width: 33.333333%;
+    float: left;
+    padding: 30px 15px 0px 15px;
+    box-sizing: border-box;}
+.products .pro-one img {
+    width: 100%;}
+.products .pro-two {
+    padding: 30px 15px 0px 15px;
+    box-sizing: border-box;
+    width: 33.333333%;
+    float: left;}
+.products .pro-two img {
+    width: 100%;}
+.products .pro-three {
+    padding: 30px 15px 0px 15px;
+    box-sizing: border-box;
+    width: 33.333333%;
+    float: left;}
+.products .pro-three img {
+    width: 100%;}    
+
+
+.Contact {
+    overflow: auto;
+    background-color: #F8F8F8;}
+.Contact .container .txt {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 30px 55px 20px 5px;
+    font-family: "Alegreya Sans";
+    line-height: 30px;
+    font-size: 17px;}
+.Contact .container .txt .icon-list li {
+    padding: 15px;}
+.Contact .container .map {
+    background-color: yellowgreen;
+    float: left;
+    width: 50%;}
+.Contact .container .map iframe {
+    width: 100%;
+    height: 70%;}
+
+
+.last {
+    overflow: auto;
+    background-color: #403E38;}
+.last .container .last-1, .last-2, .last-3, .last-4 {
+    float: left;
+    box-sizing: border-box;
+    width: 25%;
+    padding: 10px 5px 15px 15px;
+    margin-bottom: 25px;
+    color: white;
+    font-family: "Alegreya";}
+.last .container .last-1 h4, .last-2 h4, .last-3 h4, .last-4 h4 {
+    font-size: 1.5em;}
+.last .container .last-1 p, .last-2 li, .last-3 li, .last-4 p {
+    line-height: 30px;
+    color: #969696;}
+.last .container ul li {
+    position: relative;
+    padding-bottom: 10px;}
+.last .container ul {
+    list-style: none;}
+.last .container ul li:before {
+    content: '';
+    position: absolute;
+    border-right:2px solid #969696;
+    border-bottom:2px solid #969696;
+    width:5px;
+    height:5px;
+    top: calc(50% - 4px);
+    left: -20px;
+    transform: translateY(-50%) rotate(-45deg);}
+.last .container .last-4 {
+    background-image: url(images/contact-details-map.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center 130px;
+}
+.last .container .last-4   hr {
+    color: #969696;
+    background-color: #969696;
+    height:0.08px;
+    border-width:0;
+}
+
+
+.footer {
+    background-color: #343330;
+    color: #969696;
+    text-align: center;
+    padding: 20px 0;}
+.footer .fo-img, .footer p {
+    padding-bottom: 20px;}
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 0;}
+.footer ul li {
+    display: inline-block;}
+.footer ul li img {
+    width: 30px;}

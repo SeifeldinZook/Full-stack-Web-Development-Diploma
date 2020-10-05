@@ -1,0 +1,55 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="mt-5">
+        <h2>Bookmarker</h2>
+        <hr>
+    </header>
+    <div class="container">
+        <div class="bookmark">
+        <h4><b>Bookmark your favorite sites</b></h4>
+        <div class="form-group">
+            <label>Site Name :</label>
+            <input class="form-control" type="text" id="bookmarkName"
+                placeholder="Bookmark Name">
+            <small id="namePopup" class="text-danger mb-4 border">
+                Name is required
+            </small>
+        </div>
+        <div class="form-group">
+            <label>Site URL :</label>
+            <input class="form-control" type="text" id="url" placeholder="Website URL">
+            <small id="urlPopup" class="text-danger mb-4 border">
+                Url Field is required
+            </small>
+        </div>
+
+        <button onclick="addBookmark()" class="btn btn-primary">SUBMIT</button>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <table class="table text-center">
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <hr>
+        <div class="container">
+            <p>© 2019 Bookmarker Inc.</p>
+        </div>
+    </footer>
+
+    <script src="js/first.js"></script>
+</body>
+
+</html>
