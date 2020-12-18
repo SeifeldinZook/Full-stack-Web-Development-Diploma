@@ -1,0 +1,22 @@
+<%- include ('navbar.ejs') %> 
+
+<div class="container my-5">
+  <form action="/addUser" method="post" class="text-left" enctype="multipart/form-data">
+    <label class="font-weight-bold">Full Name</label>
+    <input class="form-control" placeholder="Full Name" name="name" type="text" maxlength="20" required>
+    <label class="font-weight-bold">Age</label>
+    <input class="form-control" placeholder="Age" name="age" type="number" maxlength="2" required>
+    <label class="font-weight-bold">Email</label>
+    <input class="form-control" placeholder="Email" name="email" type="email" maxlength="20" required>
+    <label class="font-weight-bold">Password</label>
+    <input class="form-control" placeholder="Password" name="password" type="password" maxlength="20" required>
+    <label>Male</label>
+    <input value="male" name="sex" type="radio" required>
+    <label>Female</label>
+    <input value="female" name="sex" type="radio" required>
+    <input type="file" name="img" class="form-control">
+    <button class="btn btn-danger w-100 mt-5">Add User</button>
+  </form>
+</div>
+
+<%- include ('footer.ejs') %> 

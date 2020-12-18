@@ -1,0 +1,42 @@
+<%- include ('navbar.ejs') %>
+
+<div class="container-fluid my-5">
+  <form class="form-inline justify-content-center my-2 my-lg-0" action="/search" method="POST">
+    <input class="form-control mr-sm-2 w-50" type="search" placeholder="Search by title" aria-label="Search" name="search" value="<%=searchedWord%>">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</div>
+
+<div class="container-fluid">
+  <div class="row card-deck mx-0">
+    <% for( let i = 0; i < result.length; i++ ) { %>
+      <div class="col-md-4 col-sm-12 mb-2 px-0">
+        <div class="card">
+          <!-- <img src="..." class="card-img-top"> -->
+          <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                <b class="nav-link active">Article <%= result[i].id %> </b>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./updateArticle/<%= result[i].id %>">Update</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/delete/<%= result[i].id %>">Delete</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><b><%= result[i].title %></b></h5>
+            <p class="card-text"><%= result[i].article %></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"><%= result[i].lastUpdated %> </small>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</div>
+
+<%- include ('footer.ejs') %>

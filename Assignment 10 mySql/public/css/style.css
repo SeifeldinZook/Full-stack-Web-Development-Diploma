@@ -1,0 +1,12 @@
+body {
+    background-color: #bbf;
+    font-family: 'segoe ui light';
+    text-align: center;
+}
+
+.card-text {
+    height: 160px;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

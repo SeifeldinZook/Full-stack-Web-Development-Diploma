@@ -1,0 +1,19 @@
+body {
+    background-color: #bbf;
+    font-family: 'segoe ui light';
+    text-align: center;
+}
+
+.card-text {
+    height: 20px;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+ul {
+    padding-left: 0;
+    text-align: left;
+    list-style: inside;
+    color: cornflowerblue;
+}

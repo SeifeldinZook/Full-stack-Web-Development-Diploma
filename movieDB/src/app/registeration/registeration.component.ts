@@ -31,7 +31,8 @@ export class RegisterationComponent implements OnInit {
       'first_name': new FormControl(null, [Validators.required, Validators.maxLength(15), Validators.minLength(3)]),
       'last_name': new FormControl(null, [Validators.required, Validators.maxLength(15), Validators.minLength(3)]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
-      'password': new FormControl(null, [Validators.required, Validators.pattern(/^[A-Z]/)])
+      'password': new FormControl(null, [Validators.required])
+      // 'password': new FormControl(null, [Validators.required, Validators.pattern(/^[A-Z]/)])
     });
   };
 };

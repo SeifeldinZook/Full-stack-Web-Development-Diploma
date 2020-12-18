@@ -1,0 +1,15 @@
+<%- include ('navbar.ejs') %> 
+
+<div class="container my-5">
+  <form action="/updateUser/<%= result.id %>" method="post" class="text-left">
+    <label class="font-weight-bold">Article Title:</label>
+    <input class="form-control" placeholder="Title" name="title" type="text" maxlength="20" value="<%= result.title %>">
+    <label class="font-weight-bold mt-3">Article:</label>
+    <textarea class="form-control" placeholder="Article" name="article" type="text" rows="10">
+      <%= result.article %>
+    </textarea>
+    <button class="btn btn-danger w-100 mt-5">Update Article</button>
+  </form>
+</div>
+
+<%- include ('footer.ejs') %> 

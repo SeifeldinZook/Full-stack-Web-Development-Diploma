@@ -1,0 +1,16 @@
+nav {
+  background-color: #1a1a1a;
+}
+
+.navbar-brand, .nav-item a i, .nav-item .logOut{
+  color: #ffff;
+}
+
+.navbar-brand:hover ,.nav-item a i:hover, .nav-item .logOut:hover {
+  color: #f25454;
+  
+}
+
+.dropdown-menu {
+  transform: translate(-75%, -10%);
+}

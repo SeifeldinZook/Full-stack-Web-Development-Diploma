@@ -1,0 +1,49 @@
+#profile {
+  min-height: 95vh;
+  background-color: #202124;
+}
+
+// #profile .notes {
+//   position: absolute;
+//   top: 0%;
+//   // left: 0%;
+//   // right: 0;
+//   // bottom: 0;
+//   // transform: translate(-50%, -50%);
+// }
+
+.note {
+  height: 250px;
+  width: 250px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: -2px -4px 5px #f25454;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: white;
+}
+
+.noteBody {
+  cursor: pointer;
+}
+.noteBody h6, .noteBody small{
+  overflow-wrap: break-word;
+}
+
+.note:hover {
+  background-color: rgb(236, 81, 81, 0.1);
+}
+
+.note h4, .note p {
+  font-family: "Poppins", sans-serif;
+}
+
+
+i {
+  cursor: pointer;
+}
+
+.myText {
+  color: #f25454;
+}

@@ -1,10 +1,10 @@
 <div class="row my-2">
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-12">
     <div class="brdr w-25 my-5"></div>
     <h2>Trending Celebrities</h2>
     <div class="brdr w-100 my-3"></div>
   </div>
-  <div *ngFor='let person of peopleTrending'  class="col-md-2">
+  <div *ngFor='let person of peopleTrending'  class="col-md-2 col-sm-4 col-4">
     <div class="allTrending my-3 position-relative" [routerLink]="['/details', person.media_type, person.id]">
       <img [src]="imgPrefix+person.profile_path" class="img-thumbnail h-190px curPointer">
       <h3 class="h6 mt-2">{{person.name}}{{person.title}}</h3>

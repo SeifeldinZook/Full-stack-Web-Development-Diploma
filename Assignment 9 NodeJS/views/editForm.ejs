@@ -1,0 +1,18 @@
+<%- include ('navbar.ejs') %> 
+
+<div class="container my-5">
+  <form action="/updateUser/<%= result.ID %>" method="post">
+      <input class="form-control" placeholder="enter your name" name="name" type="text" maxlength="35" value="<%= result.Name %>">
+      <input class="form-control my-4" placeholder="enter your age" name="age" type="number" maxlength="2" value="<%= result.Age %>">
+      <input class="form-control my-4" placeholder="enter your email" name="email" type="email" maxlength="30" value="<%= result.Email %>">
+      <input class="form-control my-4" placeholder="enter your password" name="password" type="password" maxlength="15" value="<%= result.Password %>">
+      <label for="">Male</label>
+      <input value="male" name="gender" type="radio">
+      <label for="">FeMale</label>
+      <input value="female" name="gender" type="radio">
+
+      <button class="btn btn-danger w-100">Update User</button>
+  </form>
+</div>
+
+<%- include ('footer.ejs') %> 
