@@ -1,0 +1,69 @@
+<section id="signUp">
+    <div class="container">
+        <form [formGroup]="signUpFormGroup" (ngSubmit)="signUpFormGroup.valid&&signUpSubmit()">
+            <div class="form w-50 m-auto">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input [class.is-valid]="signUpFormGroup.get('first_name').status=='VALID'"
+                            formControlName="first_name" type="text" placeholder="Enter First Name" class="form-control"
+                            maxlength="20">
+                        <h6 *ngIf="signUpFormGroup.controls.first_name.errors&&signUpFormGroup.controls.first_name.touched"
+                            class="alert alert-danger py-0 py-0" role="alert">
+                            First Name is required
+                        </h6>
+                        <!-- another way to write the alert:
+                        <h6 *ngIf="signUpFormGroup.get('first_name').errors&&signUpFormGroup.get('first_name').touched" class="alert alert-danger py-0 py-0" role="alert">
+                            First Name is required
+                        </h6>
+                        -->
+                    </div>
+                    <div class="col-md-6">
+                        <input [class.is-valid]="signUpFormGroup.get('last_name').status=='VALID'"
+                            formControlName="last_name" type="text" placeholder="Enter Last Name" class="form-control"
+                            maxlength="20">
+                        <h6 *ngIf="signUpFormGroup.get('last_name').errors&&signUpFormGroup.get('last_name').touched"
+                            class="alert alert-danger py-0 py-0" role="alert">
+                            Last Name is required
+                        </h6>
+                    </div>
+                </div>
+                <input [class.is-valid]="signUpFormGroup.get('age').status=='VALID'" formControlName="age" type="number"
+                    placeholder="Enter You Age" class="form-control mt-3" maxlength="20">
+                <h6 *ngIf="signUpFormGroup.get('age').errors&&signUpFormGroup.get('age').touched"
+                    class="alert alert-danger py-0" role="alert">
+                    Age is required
+                </h6>
+                <input [class.is-valid]="signUpFormGroup.get('email').status=='VALID'" formControlName="email"
+                    type="email" placeholder="Enter Email" class="form-control mt-3" maxlength="20">
+                <h6 *ngIf="signUpFormGroup.get('email').errors&&signUpFormGroup.get('email').touched"
+                    class="alert alert-danger py-0" role="alert">
+                    Email is required
+                </h6>
+                <input [class.is-valid]="signUpFormGroup.get('password').status=='VALID'" formControlName="password"
+                    type="password" placeholder="Enter password" class="form-control mt-3">
+                <h6 *ngIf="signUpFormGroup.get('password').errors&&signUpFormGroup.get('password').touched"
+                    class="alert alert-danger py-0" role="alert">
+                    <ul style="padding-top: 10px;">
+                        <li>Password is required from 8:10 charcters</li>
+                        <li>Password must contain at least an uppercase letter</li>
+                        <li>Password must contain at least a lowercase letter</li>
+                        <li>Password must contain at least a special charcter</li>
+                        <li>Password must contain at least a digit</li>
+                    </ul>
+                </h6>
+
+                <button [disabled]="signUpFormGroup.invalid"
+                    [ngStyle]="signUpFormGroup.invalid? isStyleValid:isStyleInvalid"
+                    class="btn btn-info w-100 mt-5"><span *ngIf="!isClicked">SignUp</span>
+                    <span *ngIf="isClicked">Wating....</span>
+                </button>
+                <h6 *ngIf="isSuccess" class="alert alert-success py-0 text-center" role="alert">
+                    {{ResponseMessage}}
+                </h6>
+                <h6 *ngIf="isUniuqeEmail" class="alert alert-danger py-0 text-center" role="alert">
+                    {{isUniuqeEmailMessage}}
+                </h6>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,58 @@
+<%- include('shared/header.ejs') %>
+
+<div class="form">
+        <div id="signup">
+            <h1>Sign Up for Free</h1>
+
+            <form action="/handleSignUp" method="post">
+                <div class="top-row">
+                    <div class="field-wrap">
+                        <label>First Name<span class="req">*</span></label>
+                        <input name="fname" type="text" value="<%= oldValues.fname %>" minlength="2" maxlength="10" required/>
+                        <% if (error.find(e => e.param == 'fname')) { %>
+                            <div class="alert alert-danger text-center">Incorrect</div>
+                        <% } %>
+                    </div>
+
+                    <div class="field-wrap">
+                        <label> Last Name<span class="req">*</span> </label>
+                        <input name="lname" type="text" value="<%= oldValues.lname %>" minlength="2" maxlength="10" required/>
+                        <% if (error.find(e => e.param == 'lname')) { %>
+                            <div class="alert alert-danger text-center">Incorrect</div>
+                        <% } %>
+                    </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label> Email Address<span class="req">*</span> </label>
+                    <input name="email" type="email" value="<%= oldValues.email %>" required/>
+                    <% if (error.find(e => e.param == 'email')) { %>
+                        <div class="alert alert-danger text-center">Incorrect</div>
+                    <% } %>
+
+                    <% if (error.find(e => e.param == 'exists')) { %>
+                        <div class="alert alert-danger text-center">Email is already registered!</div>
+                    <% } %>
+                </div>
+
+                <div class="field-wrap">
+                    <label> Set A Password<span class="req">*</span> </label>
+                    <input name="password" type="password" value="<%= oldValues.password %>" minlength="6" maxlength="20" required/>
+                    <% if (error.find(e => e.param == 'password')) { %>
+                        <div class="alert alert-danger text-center">Incorrect</div>
+                    <% } %>
+                </div>
+                <div class="field-wrap">
+                    <label> Reset A Password<span class="req">*</span> </label>
+                    <input name="rePassword" type="password" required/>
+                    <% if (error.find(e => e.param == 'rePassword')) { %>
+                        <div class="alert alert-danger text-center">Incorrect</div>
+                    <% } %>
+                </div>
+                <button type="submit" class="button button-block">Get Started</button>
+            </form>
+        </div>
+
+</div>
+
+<%- include('shared/footer.ejs') %>
