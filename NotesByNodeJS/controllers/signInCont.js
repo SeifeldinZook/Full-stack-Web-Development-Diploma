@@ -5,18 +5,31 @@ const userModel = require('../models/user.model');
 module.exports.signIn = (req, res) => {
     if (req.flash('flashEmail')[0] == 'false') {
         isEmail = false
+        isMatch = true
+        isEmailVerified = false
+        notRegEmail = req.flash('email')[0]        
     } else if (req.flash('flashPassword')[0] == 'false') {
+        isEmail = true
         isMatch = false
-    } else {
+        isEmailVerified = false
+        notRegEmail = req.flash('email')[0]
+    } else if (req.flash('emailVerification')[0] == 'false') {
         isEmail = true;
         isMatch = true;
+        isEmailVerified = false
+        notRegEmail = req.flash('email')[0]
+    } else {
+        isEmailVerified = true
+        isEmail = true;
+        isMatch = true;
+        notRegEmail = '';
     }
-    res.render('signin.ejs', { isMatch, isEmail, isLoggedIn: false });
+    res.render('signin.ejs', { isMatch, isEmail, isLoggedIn: false, notRegEmail, isEmailVerified });
 };
 
 module.exports.handleSignIn = async (req, res) => {
-    const { email, password } = req.body;
-    const user = await userModel.findOne({ email })
+    var { email, password } = req.body;
+    var user = await userModel.findOne({ email })
     if (user != null) {
         const match = await bcrypt.compare(password, user.password)
         if (match) {
@@ -26,15 +39,22 @@ module.exports.handleSignIn = async (req, res) => {
             var hour = 1000 * 60 * 60 * 24;      // 24 hours
             req.session.cookie.expires = new Date(Date.now() + hour)
             // req.session.cookie.maxAge = hour;
-            res.redirect('/home')
+            if (user.emailVerification == false) {
+                req.flash('emailVerification', "false")
+                req.flash('email', email);
+                res.redirect('/signin')
+            }
+            else {
+                res.redirect('/home')
+            }
         } else {
-            // res.render('signin.ejs', {isMatch: false, isEmail: true, isLoggedIn: false})
             req.flash('flashPassword', 'false')
+            req.flash('email', email);
             res.redirect('/signin')
         }
     } else {
-        // res.render('signin.ejs', {isMatch: true, isEmail: false, isLoggedIn: false})
-        req.flash('flashEmail', 'false')
+        req.flash('flashEmail', 'false');
+        req.flash('email', email);
         res.redirect('/signin')
     }
 }

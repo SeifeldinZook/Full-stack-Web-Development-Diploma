@@ -4,23 +4,23 @@
             <h1>Welcome Back!</h1>
 
             <form action="/handleSignin" method="post">
-                <div class="field-wrap">
+                <div class="field-wrap mb-0">
                     <label> Email Address<span class="req">*</span> </label>
-                    <input name="email" type="email" required/>
+                    <input name="email" type="email" value="<%= notRegEmail %>" required/>
                 </div>
                 <% if (!isEmail) { %>
-                    <div class="alert alert-danger text-center">Email isn't registered!</div>
+                    <small class="alert alert-danger text-center">Don't have an account? <a href="/signup">SignUp?</a></small>
                 <% } %>
 
-                <div class="field-wrap mb-0">
+                <div class="field-wrap mb-0 mt-3">
                     <label> Password<span class="req">*</span> </label>
                     <input name="password" type="password" required/>
                 </div>
                 <% if (!isMatch) { %>
-                    <div class="alert alert-danger text-center mb-2">Password is Incorrect!</div>
+                    <small class="alert alert-danger text-center">Password is Incorrect!</small>
                 <% } %>
 
-                <p class="forgot mt-4"><a href="#">Forgot Password?</a></p>
+                <p class="forgot mt-1"><a href="/forgetpassword">Forgot Password?</a></p>
 
                 <button class="button button-block">Log In</button>
             </form>

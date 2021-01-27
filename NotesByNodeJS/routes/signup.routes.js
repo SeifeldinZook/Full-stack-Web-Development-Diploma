@@ -1,8 +1,10 @@
 const app = require('express').Router();
 const signUpController = require('../controllers/signUpCont');
 const { check, validationResult} = require('express-validator');
+const userModel = require('../models/user.model');
+var jwt = require('jsonwebtoken');
 
-app.get('/', (req, res) => {
+app.get('/signup', (req, res) => {
     res.render('signup.ejs', {error: [], oldValues: {fname:'', lname:'', email:'', password:''}, isLoggedIn: false})
 });
 
@@ -20,5 +22,15 @@ app.post('/handleSignUp',
     }),
     signUpController.handleSignUp
 );
+
+app.get('/verify/:token', (req, res) => {
+    let token = req.params.token
+    let decoded = jwt.verify(token, 'shhhhh');
+    jwt.verify(token, 'shhhhh', async function(err, decoded) {
+        console.log(decoded.email);
+        await userModel.findOneAndUpdate({email: decoded.email}, {emailVerification: true})
+    });
+    res.redirect('/home')
+});
 
 module.exports = app 
