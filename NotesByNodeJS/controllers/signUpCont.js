@@ -26,7 +26,7 @@ module.exports.handleSignUp = async (req, res) => {
                 let info = await transporter.sendMail({
                     from: '"NotesByNodeJS" <zookdb@gmail.com>', // sender address
                     to: email, // list of receivers
-                    subject: "Hello ✔", // Subject line
+                    subject: "NotesByNodeJS Email Verification ✔", // Subject line
                     html: `
                     <b>Your Email is:</b> <span>${email}</span>
                     <br>

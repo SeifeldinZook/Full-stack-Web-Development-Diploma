@@ -316,3 +316,12 @@ p {
 .modalBodyPadd {
     padding: 2.5rem !important;
 }
+
+.field-icon {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    font-size: 20px;
+    transform: translate(-30%, -50%);
+    color: #F2435B;
+}

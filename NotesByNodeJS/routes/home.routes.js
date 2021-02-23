@@ -6,12 +6,12 @@ app.get('/', (req, res) => {
     res.redirect ('/home')
 });
 
-app.get('/home',auth, async(req, res) => {
+app.get('/home', auth, async(req, res) => {
     // res.json(await noteModel.find({}).populate('userID', '-password'))  (for learning)
     const UserNotes = await noteModel.find({userID: req.session.userID});
     var user = await userModel.findOne({_id: req.session.userID});
     const avatar =  user.imgURL
-    console.log(user);
+    console.log(req.session);
     await res.render('home.ejs', {name: req.session.userFN, isLoggedIn: true, UserNotes, avatar});
 });
 

@@ -31,12 +31,34 @@
 //     $(target).fadeIn(600);
 // });
 
-function getNoteID (id) {
+function getNoteID(id) {
     document.getElementById('noteID').value = id
 }
 
-function editNote (id) {
-    document.getElementById('editNoteTitle').value = document.getElementById('NoteTitle'+id).innerText;
-    document.getElementById('editNoteBody').innerHTML = document.getElementById('NoteBody'+id).innerHTML.trim();
+function editNote(id) {
+    document.getElementById('editNoteTitle').value = document.getElementById('NoteTitle' + id).innerText;
+    document.getElementById('editNoteBody').innerHTML = document.getElementById('NoteBody' + id).innerHTML.trim();
     document.getElementById('noteID2').value = id
 }
+
+$(".toggle-password").click(function () {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+});
+
+$(".toggle-repassword").click(function () {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+});
